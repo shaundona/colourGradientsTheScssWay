@@ -1,0 +1,364 @@
+//colour classes
+//array mapping : multidimensional list : sass 3.3 =>
+$colors: (
+
+    'grey': (
+        $pf-color-brand-grey-50,
+        $pf-color-brand-grey-100,
+        $pf-color-brand-grey-200,
+        $pf-color-brand-grey-300,
+        $pf-color-brand-grey-400,
+        $pf-color-brand-grey-500,
+        $pf-color-brand-grey-600,
+        $pf-color-brand-grey-700,
+        $pf-color-brand-grey-800,
+        $pf-color-brand-grey-900
+    ),
+
+    'red': (
+        $pf-color-brand-red-50,
+        $pf-color-brand-red-100,
+        $pf-color-brand-red-200,
+        $pf-color-brand-red-300,
+        $pf-color-brand-red-400,
+        $pf-color-brand-red-500,
+        $pf-color-brand-red-600,
+        $pf-color-brand-red-700,
+        $pf-color-brand-red-800,
+        $pf-color-brand-red-900
+    ),
+
+    'darkblue': (
+        $pf-color-brand-darkblue-50,
+        $pf-color-brand-darkblue-100,
+        $pf-color-brand-darkblue-200,
+        $pf-color-brand-darkblue-300,
+        $pf-color-brand-darkblue-400,
+        $pf-color-brand-darkblue-500,
+        $pf-color-brand-darkblue-600,
+        $pf-color-brand-darkblue-700,
+        $pf-color-brand-darkblue-800,
+        $pf-color-brand-darkblue-900
+    ),
+
+    'lightblue': (
+        $pf-color-brand-lightblue-50,
+        $pf-color-brand-lightblue-100,
+        $pf-color-brand-lightblue-200,
+        $pf-color-brand-lightblue-300,
+        $pf-color-brand-lightblue-400,
+        $pf-color-brand-lightblue-500,
+        $pf-color-brand-lightblue-600,
+        $pf-color-brand-lightblue-700,
+        $pf-color-brand-lightblue-800,
+        $pf-color-brand-lightblue-900
+    ),
+
+    'green': (
+        $pf-color-brand-green-50,
+        $pf-color-brand-green-100,
+        $pf-color-brand-green-200,
+        $pf-color-brand-green-300,
+        $pf-color-brand-green-400,
+        $pf-color-brand-green-500,
+        $pf-color-brand-green-600,
+        $pf-color-brand-green-700,
+        $pf-color-brand-green-800,
+        $pf-color-brand-green-900
+    ),
+
+    'purple': (
+        $pf-color-brand-purple-50,
+        $pf-color-brand-purple-100,
+        $pf-color-brand-purple-200,
+        $pf-color-brand-purple-300,
+        $pf-color-brand-purple-400,
+        $pf-color-brand-purple-500,
+        $pf-color-brand-purple-600,
+        $pf-color-brand-purple-700,
+        $pf-color-brand-purple-800,
+        $pf-color-brand-purple-900
+    ),
+
+    'orange': (
+        $pf-color-brand-orange-50,
+        $pf-color-brand-orange-100,
+        $pf-color-brand-orange-200,
+        $pf-color-brand-orange-300,
+        $pf-color-brand-orange-400,
+        $pf-color-brand-orange-500,
+        $pf-color-brand-orange-600,
+        $pf-color-brand-orange-700,
+        $pf-color-brand-orange-800,
+        $pf-color-brand-orange-900
+    ),
+    'yellow': (
+        $pf-color-brand-yellow-50,
+        $pf-color-brand-yellow-100,
+        $pf-color-brand-yellow-200,
+        $pf-color-brand-yellow-300,
+        $pf-color-brand-yellow-400,
+        $pf-color-brand-yellow-500,
+        $pf-color-brand-yellow-600,
+        $pf-color-brand-yellow-700,
+        $pf-color-brand-yellow-800,
+        $pf-color-brand-yellow-900
+    )
+
+);
+
+//function
+@each $name, $value in $colors {
+
+    //background colours
+    .pf-#{$name}-bg {
+    background-color: nth($value, 6) !important;
+    }
+
+    .pf-#{$name}-50-bg {
+    background-color: nth($value, 1) !important;
+    }
+
+    .pf-#{$name}-100-bg {
+    background-color: nth($value, 2) !important;
+    }
+
+    .pf-#{$name}-200-bg {
+    background-color: nth($value, 3) !important;
+    }
+
+    .pf-#{$name}-300-bg {
+    background-color: nth($value, 4) !important;
+    }
+
+    .pf-#{$name}-400-bg {
+    background-color: nth($value, 5) !important;
+    }
+
+    .pf-#{$name}-500-bg {
+    background-color: nth($value, 6) !important;
+    }
+
+    .pf-#{$name}-600-bg {
+    background-color: nth($value, 7) !important;
+    }
+
+    .pf-#{$name}-700-bg {
+    background-color: nth($value, 8) !important;
+    }
+
+    .pf-#{$name}-800-bg {
+    background-color: nth($value, 9) !important;
+    }
+
+    .pf-#{$name}-900-bg {
+    background-color: nth($value, 10) !important;
+    }
+
+
+    //gradient colours - vertical
+    .pf-#{$name}-50-gradient-vertical {
+      @include gradient(nth($value, 1), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-100-gradient-vertical {
+      @include gradient(nth($value, 2), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-200-gradient-vertical {
+      @include gradient(nth($value, 3), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-300-gradient-vertical {
+      @include gradient(nth($value, 4), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-400-gradient-vertical {
+      @include gradient(nth($value, 5), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-500-gradient-vertical {
+      @include gradient(nth($value, 6), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-600-gradient-vertical {
+      @include gradient(nth($value, 7), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-700-gradient-vertical {
+      @include gradient(nth($value, 8), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-800-gradient-vertical {
+      @include gradient(nth($value, 9), $white-fade, vertical);
+    }
+
+    .pf-#{$name}-900-gradient-vertical {
+      @include gradient(nth($value, 10), $white-fade, vertical);
+    }
+
+    //gradient colours - vertical-bottom
+    .pf-#{$name}-50-gradient-vertical-bottom {
+      @include gradient(nth($value, 1), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-100-gradient-vertical-bottom {
+      @include gradient(nth($value, 2), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-200-gradient-vertical-bottom {
+      @include gradient(nth($value, 3), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-300-gradient-vertical-bottom {
+      @include gradient(nth($value, 4), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-400-gradient-vertical-bottom {
+      @include gradient(nth($value, 5), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-500-gradient-vertical-bottom {
+      @include gradient(nth($value, 6), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-600-gradient-vertical-bottom {
+      @include gradient(nth($value, 7), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-700-gradient-vertical-bottom {
+      @include gradient(nth($value, 8), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-800-gradient-vertical-bottom {
+      @include gradient(nth($value, 9), $white-fade, vertical-bottom);
+    }
+
+    .pf-#{$name}-900-gradient-vertical-bottom {
+      @include gradient(nth($value, 10), $white-fade, vertical-bottom);
+    }
+
+    //gradient colours - horizontal
+    .pf-#{$name}-50-gradient-horizontal {
+      @include gradient(nth($value, 1), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-100-gradient-horizontal {
+      @include gradient(nth($value, 2), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-200-gradient-horizontal {
+      @include gradient(nth($value, 3), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-300-gradient-horizontal {
+      @include gradient(nth($value, 4), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-400-gradient-horizontal {
+      @include gradient(nth($value, 5), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-500-gradient-horizontal {
+      @include gradient(nth($value, 6), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-600-gradient-horizontal {
+      @include gradient(nth($value, 7), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-700-gradient-horizontal {
+      @include gradient(nth($value, 8), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-800-gradient-horizontal {
+      @include gradient(nth($value, 9), $white-fade, horizontal);
+    }
+
+    .pf-#{$name}-900-gradient-horizontal {
+      @include gradient(nth($value, 10), $white-fade, horizontal);
+    }
+
+    //gradient colours - horizontal-right
+    .pf-#{$name}-50-gradient-horizontal-right {
+      @include gradient(nth($value, 1), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-100-gradient-horizontal-right {
+      @include gradient(nth($value, 2), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-200-gradient-horizontal-right {
+      @include gradient(nth($value, 3), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-300-gradient-horizontal-right {
+      @include gradient(nth($value, 4), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-400-gradient-horizontal-right {
+      @include gradient(nth($value, 5), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-500-gradient-horizontal-right {
+      @include gradient(nth($value, 6), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-600-gradient-horizontal-right {
+      @include gradient(nth($value, 7), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-700-gradient-horizontal-right {
+      @include gradient(nth($value, 8), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-800-gradient-horizontal-right {
+      @include gradient(nth($value, 9), $white-fade, horizontal-right);
+    }
+
+    .pf-#{$name}-900-gradient-horizontal-right {
+      @include gradient(nth($value, 10), $white-fade, horizontal-right);
+    }
+
+    //gradient colours - radial
+    .pf-#{$name}-50-gradient-radial {
+      @include gradient(nth($value, 1), $white-fade, radial);
+    }
+
+    .pf-#{$name}-100-gradient-radial {
+      @include gradient(nth($value, 2), $white-fade, radial);
+    }
+
+    .pf-#{$name}-200-gradient-radial {
+      @include gradient(nth($value, 3), $white-fade, radial);
+    }
+
+    .pf-#{$name}-300-gradient-radial {
+      @include gradient(nth($value, 4), $white-fade, radial);
+    }
+
+    .pf-#{$name}-400-gradient-radial {
+      @include gradient(nth($value, 5), $white-fade, radial);
+    }
+
+    .pf-#{$name}-500-gradient-radial {
+      @include gradient(nth($value, 6), $white-fade, radial);
+    }
+
+    .pf-#{$name}-600-gradient-radial {
+      @include gradient(nth($value, 7), $white-fade, radial);
+    }
+
+    .pf-#{$name}-700-gradient-radial {
+      @include gradient(nth($value, 8), $white-fade, radial);
+    }
+
+    .pf-#{$name}-800-gradient-radial {
+      @include gradient(nth($value, 9), $white-fade, radial);
+    }
+
+    .pf-#{$name}-900-gradient-radial {
+      @include gradient(nth($value, 10), $white-fade, radial);
+    }
+
+}
