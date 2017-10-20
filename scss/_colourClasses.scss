@@ -107,258 +107,49 @@ $colors: (
 
 );
 
-//function
+//Background colour : Text colour : Gradient
+//function to create classes
+//$colors map is located in:  css/scss/maps/_colours-map.scss
 @each $name, $value in $colors {
 
-    //background colours
-    .pf-#{$name}-bg {
-    background-color: nth($value, 6) !important;
-    }
+  $scale: 0;
+  $mapkey: 1;
 
-    .pf-#{$name}-50-bg {
-    background-color: nth($value, 1) !important;
-    }
+  @while $scale <= 900 {
 
-    .pf-#{$name}-100-bg {
-    background-color: nth($value, 2) !important;
+    //background colour
+    .pf-#{$name}-#{$scale}-bg {
+    background-color: nth($value, $mapkey) !important;
     }
-
-    .pf-#{$name}-200-bg {
-    background-color: nth($value, 3) !important;
-    }
-
-    .pf-#{$name}-300-bg {
-    background-color: nth($value, 4) !important;
-    }
-
-    .pf-#{$name}-400-bg {
-    background-color: nth($value, 5) !important;
-    }
-
-    .pf-#{$name}-500-bg {
-    background-color: nth($value, 6) !important;
-    }
-
-    .pf-#{$name}-600-bg {
-    background-color: nth($value, 7) !important;
-    }
-
-    .pf-#{$name}-700-bg {
-    background-color: nth($value, 8) !important;
-    }
-
-    .pf-#{$name}-800-bg {
-    background-color: nth($value, 9) !important;
-    }
-
-    .pf-#{$name}-900-bg {
-    background-color: nth($value, 10) !important;
-    }
-
 
     //gradient colours - vertical
-    .pf-#{$name}-50-gradient-vertical {
-      @include gradient(nth($value, 1), $white-fade, vertical);
+    .pf-#{$name}-#{$scale}-gradient-vertical {
+      @include gradient(nth($value, $mapkey), $white-fade, vertical);
     }
 
-    .pf-#{$name}-100-gradient-vertical {
-      @include gradient(nth($value, 2), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-200-gradient-vertical {
-      @include gradient(nth($value, 3), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-300-gradient-vertical {
-      @include gradient(nth($value, 4), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-400-gradient-vertical {
-      @include gradient(nth($value, 5), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-500-gradient-vertical {
-      @include gradient(nth($value, 6), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-600-gradient-vertical {
-      @include gradient(nth($value, 7), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-700-gradient-vertical {
-      @include gradient(nth($value, 8), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-800-gradient-vertical {
-      @include gradient(nth($value, 9), $white-fade, vertical);
-    }
-
-    .pf-#{$name}-900-gradient-vertical {
-      @include gradient(nth($value, 10), $white-fade, vertical);
-    }
-
-    //gradient colours - vertical-bottom
-    .pf-#{$name}-50-gradient-vertical-bottom {
-      @include gradient(nth($value, 1), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-100-gradient-vertical-bottom {
-      @include gradient(nth($value, 2), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-200-gradient-vertical-bottom {
-      @include gradient(nth($value, 3), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-300-gradient-vertical-bottom {
-      @include gradient(nth($value, 4), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-400-gradient-vertical-bottom {
-      @include gradient(nth($value, 5), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-500-gradient-vertical-bottom {
-      @include gradient(nth($value, 6), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-600-gradient-vertical-bottom {
-      @include gradient(nth($value, 7), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-700-gradient-vertical-bottom {
-      @include gradient(nth($value, 8), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-800-gradient-vertical-bottom {
-      @include gradient(nth($value, 9), $white-fade, vertical-bottom);
-    }
-
-    .pf-#{$name}-900-gradient-vertical-bottom {
-      @include gradient(nth($value, 10), $white-fade, vertical-bottom);
+    //gradient colours - vertical reversed
+    .pf-#{$name}-#{$scale}-gradient-vertical-bottom {
+      @include gradient(nth($value, $mapkey), $white-fade, vertical-bottom);
     }
 
     //gradient colours - horizontal
-    .pf-#{$name}-50-gradient-horizontal {
-      @include gradient(nth($value, 1), $white-fade, horizontal);
+    .pf-#{$name}-#{$scale}-gradient-horizontal {
+      @include gradient(nth($value, $mapkey), $white-fade, horizontal);
     }
 
-    .pf-#{$name}-100-gradient-horizontal {
-      @include gradient(nth($value, 2), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-200-gradient-horizontal {
-      @include gradient(nth($value, 3), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-300-gradient-horizontal {
-      @include gradient(nth($value, 4), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-400-gradient-horizontal {
-      @include gradient(nth($value, 5), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-500-gradient-horizontal {
-      @include gradient(nth($value, 6), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-600-gradient-horizontal {
-      @include gradient(nth($value, 7), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-700-gradient-horizontal {
-      @include gradient(nth($value, 8), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-800-gradient-horizontal {
-      @include gradient(nth($value, 9), $white-fade, horizontal);
-    }
-
-    .pf-#{$name}-900-gradient-horizontal {
-      @include gradient(nth($value, 10), $white-fade, horizontal);
-    }
-
-    //gradient colours - horizontal-right
-    .pf-#{$name}-50-gradient-horizontal-right {
-      @include gradient(nth($value, 1), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-100-gradient-horizontal-right {
-      @include gradient(nth($value, 2), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-200-gradient-horizontal-right {
-      @include gradient(nth($value, 3), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-300-gradient-horizontal-right {
-      @include gradient(nth($value, 4), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-400-gradient-horizontal-right {
-      @include gradient(nth($value, 5), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-500-gradient-horizontal-right {
-      @include gradient(nth($value, 6), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-600-gradient-horizontal-right {
-      @include gradient(nth($value, 7), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-700-gradient-horizontal-right {
-      @include gradient(nth($value, 8), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-800-gradient-horizontal-right {
-      @include gradient(nth($value, 9), $white-fade, horizontal-right);
-    }
-
-    .pf-#{$name}-900-gradient-horizontal-right {
-      @include gradient(nth($value, 10), $white-fade, horizontal-right);
+    //gradient colours - horizontal reversed
+    .pf-#{$name}-#{$scale}-gradient-horizontal-right {
+      @include gradient(nth($value, $mapkey), $white-fade, horizontal-right);
     }
 
     //gradient colours - radial
-    .pf-#{$name}-50-gradient-radial {
-      @include gradient(nth($value, 1), $white-fade, radial);
+    .pf-#{$name}-#{$scale}-gradient-radial {
+      @include gradient(nth($value, $mapkey), $white-fade, radial);
     }
 
-    .pf-#{$name}-100-gradient-radial {
-      @include gradient(nth($value, 2), $white-fade, radial);
-    }
+    $scale: $scale + 100;
+    $mapkey: $mapkey + 1;
 
-    .pf-#{$name}-200-gradient-radial {
-      @include gradient(nth($value, 3), $white-fade, radial);
-    }
-
-    .pf-#{$name}-300-gradient-radial {
-      @include gradient(nth($value, 4), $white-fade, radial);
-    }
-
-    .pf-#{$name}-400-gradient-radial {
-      @include gradient(nth($value, 5), $white-fade, radial);
-    }
-
-    .pf-#{$name}-500-gradient-radial {
-      @include gradient(nth($value, 6), $white-fade, radial);
-    }
-
-    .pf-#{$name}-600-gradient-radial {
-      @include gradient(nth($value, 7), $white-fade, radial);
-    }
-
-    .pf-#{$name}-700-gradient-radial {
-      @include gradient(nth($value, 8), $white-fade, radial);
-    }
-
-    .pf-#{$name}-800-gradient-radial {
-      @include gradient(nth($value, 9), $white-fade, radial);
-    }
-
-    .pf-#{$name}-900-gradient-radial {
-      @include gradient(nth($value, 10), $white-fade, radial);
-    }
+  }
 
 }
