@@ -7,7 +7,7 @@ Open-source stylekit generator, optimized for quick reusable frontend styling
 - Using your new stylekit apply the classes to your project.
 
 ## Demo
-- https://www.pencilandfox.getforge.io/scrummylibrary/colour-gradient-mashUps
+- https://pencilandfox.getforge.io/scrummylibrary/colour-gradient-mashUps
 
 ## Requirements
 - SASS compiler
